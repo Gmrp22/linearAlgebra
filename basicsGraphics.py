@@ -36,3 +36,28 @@ plt.xlabel("X")
 plt.ylabel("Y")
 plt.title("Vectores con punto de inicio")
 plt.show()
+
+
+
+
+
+
+# Vector 2D
+v = np.array([1, 2])
+
+# Dibujar el vector original desde el origen
+plt.plot([0, v[0]], [0, v[1]], color='black', marker='o', label='v')
+
+# Dibujar 10 multiplicaciones por escalares aleatorios
+for i in range(10):
+    s = np.random.randn()  # escalar aleatorio normal
+    sv = s * v
+    plt.plot([0, sv[0]], [0, sv[1]], color='blue', alpha=0.7)
+
+# Configuración del gráfico
+plt.grid(True)
+plt.axis([-4, 4, -4, 4])
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("10 scalar multiples of a 2D vector")
+plt.show()
